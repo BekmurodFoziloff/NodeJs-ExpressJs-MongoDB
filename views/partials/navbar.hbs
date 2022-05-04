@@ -1,0 +1,53 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Online kurslar</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isHome}}
+        <li class="active"><a href="/">Asosiy</a></li>
+      {{else}}
+        <li><a href="/">Asosiy</a></li>
+      {{/if}}
+
+      {{#if isCourses}}
+        <li class="active"><a href="/courses">Kurslar</a></li>
+      {{else}}
+        <li><a href="/courses">Kurslar</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+        {{#if isAdd}}
+          <li class="active"><a href="/add">Kurs qo'shish</a></li>
+        {{else}}
+          <li><a href="/add">Kurs qo'shish</a></li>
+        {{/if}}
+
+        {{#if isProfile}}
+          <li class="active"><a href="/profile">Profil</a></li>
+        {{else}}
+          <li><a href="/profile">Profil</a></li>
+        {{/if}}
+
+        {{#if isCard}}
+          <li class="active"><a href="/card">Savat</a></li>
+        {{else}}
+          <li><a href="/card">Savat</a></li>
+        {{/if}}
+        
+        {{#if isOrder}}
+          <li class="active"><a href="/orders">Buyurtma</a></li>
+        {{else}}
+          <li><a href="/orders">Buyurtma</a></li>
+        {{/if}}
+        <li><a href="/auth/logout">Chiqish</a></li>
+      {{else}}
+        {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Kirish</a></li>
+        {{else}}
+          <li><a href="/auth/login#login">Kirish</a></li>
+        {{/if}}
+      {{/if}}
+      
+    </ul>
+  </div>
+</nav>
